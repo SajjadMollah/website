@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+   
+    <script src="https://kit.fontawesome.com/73af2e1942.js" crossorigin="anonymous"></script>
+    <style>
+          .header {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="form-box">
+            <div class="header">Welcome to Healthy-Life</div>
+            <h2 id="subtitle">User Information</h2>
+            <div class="home-box">
+                <div id="userInfo">
+                    <p><i class="fas fa-user"></i> Name: <span id="displayName"></span></p>
+                    <p><i class="fas fa-envelope"></i> Email: <span id="displayEmail"></span></p>
+                    <p><i class="fas fa-lock"></i> Password: <span id="displayPassword"></span></p>
+                    <p><i class="fas fa-balance-scale"></i> Weight: <span id="displayWeight"></span></p>
+                    <p><i class="fas fa-ruler"></i> Height: <span id="displayHeight"></span></p>
+                </div>
+            </div>
+            
+        </div>
+        
+    </div>
+
+    <script>
+        document.getElementById("displayName").innerText = sessionStorage.getItem("name");
+        document.getElementById("displayEmail").innerText = sessionStorage.getItem("email");
+        document.getElementById("displayPassword").innerText = sessionStorage.getItem("password");
+        document.getElementById("displayWeight").innerText = sessionStorage.getItem("weight");
+        document.getElementById("displayHeight").innerText = sessionStorage.getItem("height");
+    </script>
+
+    <div class="container">
+        <div class="form-box">
+         
+            <div class="button-container">
+                <a href="https://www.nhs.uk/conditions/" class="advice-button">Advice</a>
+                <a href="contact.html" class="contact-button">Contact Us</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
